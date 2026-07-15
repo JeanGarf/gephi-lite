@@ -203,6 +203,9 @@
                     "allOf": [
                         {
                             "properties": {
+                                "defaultValue": {
+                                    "$ref": "#/definitions/Scalar"
+                                },
                                 "dynamic": {
                                     "const": false,
                                     "type": "boolean"
@@ -234,6 +237,9 @@
                     "allOf": [
                         {
                             "properties": {
+                                "defaultValue": {
+                                    "$ref": "#/definitions/Scalar"
+                                },
                                 "dynamic": {
                                     "const": false,
                                     "type": "boolean"
@@ -265,6 +271,9 @@
                     "allOf": [
                         {
                             "properties": {
+                                "defaultValue": {
+                                    "$ref": "#/definitions/Scalar"
+                                },
                                 "dynamic": {
                                     "const": false,
                                     "type": "boolean"
@@ -296,6 +305,9 @@
                     "allOf": [
                         {
                             "properties": {
+                                "defaultValue": {
+                                    "$ref": "#/definitions/Scalar"
+                                },
                                 "dynamic": {
                                     "const": false,
                                     "type": "boolean"
@@ -327,6 +339,9 @@
                     "allOf": [
                         {
                             "properties": {
+                                "defaultValue": {
+                                    "$ref": "#/definitions/Scalar"
+                                },
                                 "dynamic": {
                                     "const": false,
                                     "type": "boolean"
@@ -358,6 +373,9 @@
                     "allOf": [
                         {
                             "properties": {
+                                "defaultValue": {
+                                    "$ref": "#/definitions/Scalar"
+                                },
                                 "dynamic": {
                                     "const": false,
                                     "type": "boolean"
@@ -389,6 +407,9 @@
                     "allOf": [
                         {
                             "properties": {
+                                "defaultValue": {
+                                    "$ref": "#/definitions/Scalar"
+                                },
                                 "dynamic": {
                                     "const": false,
                                     "type": "boolean"
@@ -428,6 +449,9 @@
                     "allOf": [
                         {
                             "properties": {
+                                "defaultValue": {
+                                    "$ref": "#/definitions/Scalar"
+                                },
                                 "dynamic": {
                                     "const": false,
                                     "type": "boolean"
@@ -471,6 +495,9 @@
                     "allOf": [
                         {
                             "properties": {
+                                "defaultValue": {
+                                    "$ref": "#/definitions/Scalar"
+                                },
                                 "dynamic": {
                                     "const": false,
                                     "type": "boolean"
@@ -503,6 +530,9 @@
                     "allOf": [
                         {
                             "properties": {
+                                "defaultValue": {
+                                    "$ref": "#/definitions/Scalar"
+                                },
                                 "dynamic": {
                                     "const": false,
                                     "type": "boolean"
@@ -535,6 +565,9 @@
                     "allOf": [
                         {
                             "properties": {
+                                "defaultValue": {
+                                    "$ref": "#/definitions/Scalar"
+                                },
                                 "dynamic": {
                                     "const": false,
                                     "type": "boolean"
@@ -567,6 +600,9 @@
                     "allOf": [
                         {
                             "properties": {
+                                "defaultValue": {
+                                    "$ref": "#/definitions/Scalar"
+                                },
                                 "dynamic": {
                                     "const": false,
                                     "type": "boolean"
@@ -599,6 +635,9 @@
                     "allOf": [
                         {
                             "properties": {
+                                "defaultValue": {
+                                    "$ref": "#/definitions/Scalar"
+                                },
                                 "dynamic": {
                                     "const": false,
                                     "type": "boolean"
@@ -631,6 +670,9 @@
                     "allOf": [
                         {
                             "properties": {
+                                "defaultValue": {
+                                    "$ref": "#/definitions/Scalar"
+                                },
                                 "dynamic": {
                                     "const": false,
                                     "type": "boolean"
@@ -663,6 +705,9 @@
                     "allOf": [
                         {
                             "properties": {
+                                "defaultValue": {
+                                    "$ref": "#/definitions/Scalar"
+                                },
                                 "dynamic": {
                                     "const": false,
                                     "type": "boolean"
@@ -703,6 +748,9 @@
                     "allOf": [
                         {
                             "properties": {
+                                "defaultValue": {
+                                    "$ref": "#/definitions/Scalar"
+                                },
                                 "dynamic": {
                                     "const": false,
                                     "type": "boolean"
@@ -747,6 +795,9 @@
                     "allOf": [
                         {
                             "properties": {
+                                "defaultValue": {
+                                    "$ref": "#/definitions/Scalar"
+                                },
                                 "dynamic": {
                                     "const": false,
                                     "type": "boolean"
@@ -779,6 +830,9 @@
                     "allOf": [
                         {
                             "properties": {
+                                "defaultValue": {
+                                    "$ref": "#/definitions/Scalar"
+                                },
                                 "dynamic": {
                                     "const": false,
                                     "type": "boolean"
@@ -811,6 +865,9 @@
                     "allOf": [
                         {
                             "properties": {
+                                "defaultValue": {
+                                    "$ref": "#/definitions/Scalar"
+                                },
                                 "dynamic": {
                                     "const": false,
                                     "type": "boolean"
@@ -843,6 +900,9 @@
                     "allOf": [
                         {
                             "properties": {
+                                "defaultValue": {
+                                    "$ref": "#/definitions/Scalar"
+                                },
                                 "dynamic": {
                                     "const": false,
                                     "type": "boolean"
@@ -875,6 +935,9 @@
                     "allOf": [
                         {
                             "properties": {
+                                "defaultValue": {
+                                    "$ref": "#/definitions/Scalar"
+                                },
                                 "dynamic": {
                                     "const": false,
                                     "type": "boolean"
@@ -907,6 +970,9 @@
                     "allOf": [
                         {
                             "properties": {
+                                "defaultValue": {
+                                    "$ref": "#/definitions/Scalar"
+                                },
                                 "dynamic": {
                                     "const": false,
                                     "type": "boolean"
@@ -939,6 +1005,9 @@
                     "allOf": [
                         {
                             "properties": {
+                                "defaultValue": {
+                                    "$ref": "#/definitions/Scalar"
+                                },
                                 "dynamic": {
                                     "const": false,
                                     "type": "boolean"
@@ -979,6 +1048,9 @@
                     "allOf": [
                         {
                             "properties": {
+                                "defaultValue": {
+                                    "$ref": "#/definitions/Scalar"
+                                },
                                 "dynamic": {
                                     "const": false,
                                     "type": "boolean"
@@ -1023,6 +1095,9 @@
                     "allOf": [
                         {
                             "properties": {
+                                "defaultValue": {
+                                    "$ref": "#/definitions/Scalar"
+                                },
                                 "dynamic": {
                                     "type": "boolean"
                                 },
@@ -1053,6 +1128,9 @@
                     "allOf": [
                         {
                             "properties": {
+                                "defaultValue": {
+                                    "$ref": "#/definitions/Scalar"
+                                },
                                 "dynamic": {
                                     "type": "boolean"
                                 },
@@ -1083,6 +1161,9 @@
                     "allOf": [
                         {
                             "properties": {
+                                "defaultValue": {
+                                    "$ref": "#/definitions/Scalar"
+                                },
                                 "dynamic": {
                                     "type": "boolean"
                                 },
@@ -1113,6 +1194,9 @@
                     "allOf": [
                         {
                             "properties": {
+                                "defaultValue": {
+                                    "$ref": "#/definitions/Scalar"
+                                },
                                 "dynamic": {
                                     "type": "boolean"
                                 },
@@ -1143,6 +1227,9 @@
                     "allOf": [
                         {
                             "properties": {
+                                "defaultValue": {
+                                    "$ref": "#/definitions/Scalar"
+                                },
                                 "dynamic": {
                                     "type": "boolean"
                                 },
@@ -1173,6 +1260,9 @@
                     "allOf": [
                         {
                             "properties": {
+                                "defaultValue": {
+                                    "$ref": "#/definitions/Scalar"
+                                },
                                 "dynamic": {
                                     "type": "boolean"
                                 },
@@ -1203,6 +1293,9 @@
                     "allOf": [
                         {
                             "properties": {
+                                "defaultValue": {
+                                    "$ref": "#/definitions/Scalar"
+                                },
                                 "dynamic": {
                                     "type": "boolean"
                                 },
@@ -1241,6 +1334,9 @@
                     "allOf": [
                         {
                             "properties": {
+                                "defaultValue": {
+                                    "$ref": "#/definitions/Scalar"
+                                },
                                 "dynamic": {
                                     "type": "boolean"
                                 },
@@ -1697,6 +1793,14 @@
         },
         "Record<string,string>": {
             "type": "object"
+        },
+        "Scalar": {
+            "description": "BASE TYPES:\n***********",
+            "type": [
+                "string",
+                "number",
+                "boolean"
+            ]
         },
         "ScriptFilterType": {
             "properties": {
