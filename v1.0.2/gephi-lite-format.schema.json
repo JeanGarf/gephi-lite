@@ -218,6 +218,9 @@
                                 },
                                 "label": {
                                     "type": "string"
+                                },
+                                "readOnly": {
+                                    "type": "boolean"
                                 }
                             },
                             "type": "object"
@@ -252,6 +255,9 @@
                                 },
                                 "label": {
                                     "type": "string"
+                                },
+                                "readOnly": {
+                                    "type": "boolean"
                                 }
                             },
                             "type": "object"
@@ -286,6 +292,9 @@
                                 },
                                 "label": {
                                     "type": "string"
+                                },
+                                "readOnly": {
+                                    "type": "boolean"
                                 }
                             },
                             "type": "object"
@@ -320,6 +329,9 @@
                                 },
                                 "label": {
                                     "type": "string"
+                                },
+                                "readOnly": {
+                                    "type": "boolean"
                                 }
                             },
                             "type": "object"
@@ -354,6 +366,9 @@
                                 },
                                 "label": {
                                     "type": "string"
+                                },
+                                "readOnly": {
+                                    "type": "boolean"
                                 }
                             },
                             "type": "object"
@@ -388,6 +403,9 @@
                                 },
                                 "label": {
                                     "type": "string"
+                                },
+                                "readOnly": {
+                                    "type": "boolean"
                                 }
                             },
                             "type": "object"
@@ -422,6 +440,9 @@
                                 },
                                 "label": {
                                     "type": "string"
+                                },
+                                "readOnly": {
+                                    "type": "boolean"
                                 }
                             },
                             "type": "object"
@@ -464,6 +485,9 @@
                                 },
                                 "label": {
                                     "type": "string"
+                                },
+                                "readOnly": {
+                                    "type": "boolean"
                                 }
                             },
                             "type": "object"
@@ -511,6 +535,9 @@
                                 },
                                 "label": {
                                     "type": "string"
+                                },
+                                "readOnly": {
+                                    "type": "boolean"
                                 }
                             },
                             "type": "object"
@@ -546,6 +573,9 @@
                                 },
                                 "label": {
                                     "type": "string"
+                                },
+                                "readOnly": {
+                                    "type": "boolean"
                                 }
                             },
                             "type": "object"
@@ -581,6 +611,9 @@
                                 },
                                 "label": {
                                     "type": "string"
+                                },
+                                "readOnly": {
+                                    "type": "boolean"
                                 }
                             },
                             "type": "object"
@@ -616,6 +649,9 @@
                                 },
                                 "label": {
                                     "type": "string"
+                                },
+                                "readOnly": {
+                                    "type": "boolean"
                                 }
                             },
                             "type": "object"
@@ -651,6 +687,9 @@
                                 },
                                 "label": {
                                     "type": "string"
+                                },
+                                "readOnly": {
+                                    "type": "boolean"
                                 }
                             },
                             "type": "object"
@@ -686,6 +725,9 @@
                                 },
                                 "label": {
                                     "type": "string"
+                                },
+                                "readOnly": {
+                                    "type": "boolean"
                                 }
                             },
                             "type": "object"
@@ -721,6 +763,9 @@
                                 },
                                 "label": {
                                     "type": "string"
+                                },
+                                "readOnly": {
+                                    "type": "boolean"
                                 }
                             },
                             "type": "object"
@@ -764,6 +809,9 @@
                                 },
                                 "label": {
                                     "type": "string"
+                                },
+                                "readOnly": {
+                                    "type": "boolean"
                                 }
                             },
                             "type": "object"
@@ -811,6 +859,9 @@
                                 },
                                 "label": {
                                     "type": "string"
+                                },
+                                "readOnly": {
+                                    "type": "boolean"
                                 }
                             },
                             "type": "object"
@@ -846,6 +897,9 @@
                                 },
                                 "label": {
                                     "type": "string"
+                                },
+                                "readOnly": {
+                                    "type": "boolean"
                                 }
                             },
                             "type": "object"
@@ -881,6 +935,9 @@
                                 },
                                 "label": {
                                     "type": "string"
+                                },
+                                "readOnly": {
+                                    "type": "boolean"
                                 }
                             },
                             "type": "object"
@@ -916,6 +973,9 @@
                                 },
                                 "label": {
                                     "type": "string"
+                                },
+                                "readOnly": {
+                                    "type": "boolean"
                                 }
                             },
                             "type": "object"
@@ -951,6 +1011,9 @@
                                 },
                                 "label": {
                                     "type": "string"
+                                },
+                                "readOnly": {
+                                    "type": "boolean"
                                 }
                             },
                             "type": "object"
@@ -986,6 +1049,9 @@
                                 },
                                 "label": {
                                     "type": "string"
+                                },
+                                "readOnly": {
+                                    "type": "boolean"
                                 }
                             },
                             "type": "object"
@@ -1021,6 +1087,9 @@
                                 },
                                 "label": {
                                     "type": "string"
+                                },
+                                "readOnly": {
+                                    "type": "boolean"
                                 }
                             },
                             "type": "object"
@@ -1064,6 +1133,9 @@
                                 },
                                 "label": {
                                     "type": "string"
+                                },
+                                "readOnly": {
+                                    "type": "boolean"
                                 }
                             },
                             "type": "object"
@@ -1109,6 +1181,9 @@
                                 },
                                 "label": {
                                     "type": "string"
+                                },
+                                "readOnly": {
+                                    "type": "boolean"
                                 }
                             },
                             "type": "object"
@@ -1142,6 +1217,9 @@
                                 },
                                 "label": {
                                     "type": "string"
+                                },
+                                "readOnly": {
+                                    "type": "boolean"
                                 }
                             },
                             "type": "object"
@@ -1175,6 +1253,9 @@
                                 },
                                 "label": {
                                     "type": "string"
+                                },
+                                "readOnly": {
+                                    "type": "boolean"
                                 }
                             },
                             "type": "object"
@@ -1208,6 +1289,9 @@
                                 },
                                 "label": {
                                     "type": "string"
+                                },
+                                "readOnly": {
+                                    "type": "boolean"
                                 }
                             },
                             "type": "object"
@@ -1241,6 +1325,9 @@
                                 },
                                 "label": {
                                     "type": "string"
+                                },
+                                "readOnly": {
+                                    "type": "boolean"
                                 }
                             },
                             "type": "object"
@@ -1274,6 +1361,9 @@
                                 },
                                 "label": {
                                     "type": "string"
+                                },
+                                "readOnly": {
+                                    "type": "boolean"
                                 }
                             },
                             "type": "object"
@@ -1307,6 +1397,9 @@
                                 },
                                 "label": {
                                     "type": "string"
+                                },
+                                "readOnly": {
+                                    "type": "boolean"
                                 }
                             },
                             "type": "object"
@@ -1348,6 +1441,9 @@
                                 },
                                 "label": {
                                     "type": "string"
+                                },
+                                "readOnly": {
+                                    "type": "boolean"
                                 }
                             },
                             "type": "object"
