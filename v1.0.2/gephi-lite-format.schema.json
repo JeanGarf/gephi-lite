@@ -221,6 +221,10 @@
                                 },
                                 "readOnly": {
                                     "type": "boolean"
+                                },
+                                "script": {
+                                    "description": "A user-provided function that computes the value of a \"formula\" (scripted) field for a given item.\nIt receives the item id, its (static) attributes, its index in the graph and the full graph instance.",
+                                    "type": "object"
                                 }
                             },
                             "type": "object"
@@ -258,6 +262,10 @@
                                 },
                                 "readOnly": {
                                     "type": "boolean"
+                                },
+                                "script": {
+                                    "description": "A user-provided function that computes the value of a \"formula\" (scripted) field for a given item.\nIt receives the item id, its (static) attributes, its index in the graph and the full graph instance.",
+                                    "type": "object"
                                 }
                             },
                             "type": "object"
@@ -295,6 +303,10 @@
                                 },
                                 "readOnly": {
                                     "type": "boolean"
+                                },
+                                "script": {
+                                    "description": "A user-provided function that computes the value of a \"formula\" (scripted) field for a given item.\nIt receives the item id, its (static) attributes, its index in the graph and the full graph instance.",
+                                    "type": "object"
                                 }
                             },
                             "type": "object"
@@ -332,6 +344,10 @@
                                 },
                                 "readOnly": {
                                     "type": "boolean"
+                                },
+                                "script": {
+                                    "description": "A user-provided function that computes the value of a \"formula\" (scripted) field for a given item.\nIt receives the item id, its (static) attributes, its index in the graph and the full graph instance.",
+                                    "type": "object"
                                 }
                             },
                             "type": "object"
@@ -369,6 +385,10 @@
                                 },
                                 "readOnly": {
                                     "type": "boolean"
+                                },
+                                "script": {
+                                    "description": "A user-provided function that computes the value of a \"formula\" (scripted) field for a given item.\nIt receives the item id, its (static) attributes, its index in the graph and the full graph instance.",
+                                    "type": "object"
                                 }
                             },
                             "type": "object"
@@ -406,6 +426,10 @@
                                 },
                                 "readOnly": {
                                     "type": "boolean"
+                                },
+                                "script": {
+                                    "description": "A user-provided function that computes the value of a \"formula\" (scripted) field for a given item.\nIt receives the item id, its (static) attributes, its index in the graph and the full graph instance.",
+                                    "type": "object"
                                 }
                             },
                             "type": "object"
@@ -443,6 +467,10 @@
                                 },
                                 "readOnly": {
                                     "type": "boolean"
+                                },
+                                "script": {
+                                    "description": "A user-provided function that computes the value of a \"formula\" (scripted) field for a given item.\nIt receives the item id, its (static) attributes, its index in the graph and the full graph instance.",
+                                    "type": "object"
                                 }
                             },
                             "type": "object"
@@ -488,6 +516,10 @@
                                 },
                                 "readOnly": {
                                     "type": "boolean"
+                                },
+                                "script": {
+                                    "description": "A user-provided function that computes the value of a \"formula\" (scripted) field for a given item.\nIt receives the item id, its (static) attributes, its index in the graph and the full graph instance.",
+                                    "type": "object"
                                 }
                             },
                             "type": "object"
@@ -538,6 +570,10 @@
                                 },
                                 "readOnly": {
                                     "type": "boolean"
+                                },
+                                "script": {
+                                    "description": "A user-provided function that computes the value of a \"formula\" (scripted) field for a given item.\nIt receives the item id, its (static) attributes, its index in the graph and the full graph instance.",
+                                    "type": "object"
                                 }
                             },
                             "type": "object"
@@ -576,6 +612,10 @@
                                 },
                                 "readOnly": {
                                     "type": "boolean"
+                                },
+                                "script": {
+                                    "description": "A user-provided function that computes the value of a \"formula\" (scripted) field for a given item.\nIt receives the item id, its (static) attributes, its index in the graph and the full graph instance.",
+                                    "type": "object"
                                 }
                             },
                             "type": "object"
@@ -614,6 +654,10 @@
                                 },
                                 "readOnly": {
                                     "type": "boolean"
+                                },
+                                "script": {
+                                    "description": "A user-provided function that computes the value of a \"formula\" (scripted) field for a given item.\nIt receives the item id, its (static) attributes, its index in the graph and the full graph instance.",
+                                    "type": "object"
                                 }
                             },
                             "type": "object"
@@ -652,6 +696,10 @@
                                 },
                                 "readOnly": {
                                     "type": "boolean"
+                                },
+                                "script": {
+                                    "description": "A user-provided function that computes the value of a \"formula\" (scripted) field for a given item.\nIt receives the item id, its (static) attributes, its index in the graph and the full graph instance.",
+                                    "type": "object"
                                 }
                             },
                             "type": "object"
@@ -690,6 +738,10 @@
                                 },
                                 "readOnly": {
                                     "type": "boolean"
+                                },
+                                "script": {
+                                    "description": "A user-provided function that computes the value of a \"formula\" (scripted) field for a given item.\nIt receives the item id, its (static) attributes, its index in the graph and the full graph instance.",
+                                    "type": "object"
                                 }
                             },
                             "type": "object"
@@ -728,6 +780,10 @@
                                 },
                                 "readOnly": {
                                     "type": "boolean"
+                                },
+                                "script": {
+                                    "description": "A user-provided function that computes the value of a \"formula\" (scripted) field for a given item.\nIt receives the item id, its (static) attributes, its index in the graph and the full graph instance.",
+                                    "type": "object"
                                 }
                             },
                             "type": "object"
@@ -766,6 +822,10 @@
                                 },
                                 "readOnly": {
                                     "type": "boolean"
+                                },
+                                "script": {
+                                    "description": "A user-provided function that computes the value of a \"formula\" (scripted) field for a given item.\nIt receives the item id, its (static) attributes, its index in the graph and the full graph instance.",
+                                    "type": "object"
                                 }
                             },
                             "type": "object"
@@ -812,6 +872,10 @@
                                 },
                                 "readOnly": {
                                     "type": "boolean"
+                                },
+                                "script": {
+                                    "description": "A user-provided function that computes the value of a \"formula\" (scripted) field for a given item.\nIt receives the item id, its (static) attributes, its index in the graph and the full graph instance.",
+                                    "type": "object"
                                 }
                             },
                             "type": "object"
@@ -862,6 +926,10 @@
                                 },
                                 "readOnly": {
                                     "type": "boolean"
+                                },
+                                "script": {
+                                    "description": "A user-provided function that computes the value of a \"formula\" (scripted) field for a given item.\nIt receives the item id, its (static) attributes, its index in the graph and the full graph instance.",
+                                    "type": "object"
                                 }
                             },
                             "type": "object"
@@ -900,6 +968,10 @@
                                 },
                                 "readOnly": {
                                     "type": "boolean"
+                                },
+                                "script": {
+                                    "description": "A user-provided function that computes the value of a \"formula\" (scripted) field for a given item.\nIt receives the item id, its (static) attributes, its index in the graph and the full graph instance.",
+                                    "type": "object"
                                 }
                             },
                             "type": "object"
@@ -938,6 +1010,10 @@
                                 },
                                 "readOnly": {
                                     "type": "boolean"
+                                },
+                                "script": {
+                                    "description": "A user-provided function that computes the value of a \"formula\" (scripted) field for a given item.\nIt receives the item id, its (static) attributes, its index in the graph and the full graph instance.",
+                                    "type": "object"
                                 }
                             },
                             "type": "object"
@@ -976,6 +1052,10 @@
                                 },
                                 "readOnly": {
                                     "type": "boolean"
+                                },
+                                "script": {
+                                    "description": "A user-provided function that computes the value of a \"formula\" (scripted) field for a given item.\nIt receives the item id, its (static) attributes, its index in the graph and the full graph instance.",
+                                    "type": "object"
                                 }
                             },
                             "type": "object"
@@ -1014,6 +1094,10 @@
                                 },
                                 "readOnly": {
                                     "type": "boolean"
+                                },
+                                "script": {
+                                    "description": "A user-provided function that computes the value of a \"formula\" (scripted) field for a given item.\nIt receives the item id, its (static) attributes, its index in the graph and the full graph instance.",
+                                    "type": "object"
                                 }
                             },
                             "type": "object"
@@ -1052,6 +1136,10 @@
                                 },
                                 "readOnly": {
                                     "type": "boolean"
+                                },
+                                "script": {
+                                    "description": "A user-provided function that computes the value of a \"formula\" (scripted) field for a given item.\nIt receives the item id, its (static) attributes, its index in the graph and the full graph instance.",
+                                    "type": "object"
                                 }
                             },
                             "type": "object"
@@ -1090,6 +1178,10 @@
                                 },
                                 "readOnly": {
                                     "type": "boolean"
+                                },
+                                "script": {
+                                    "description": "A user-provided function that computes the value of a \"formula\" (scripted) field for a given item.\nIt receives the item id, its (static) attributes, its index in the graph and the full graph instance.",
+                                    "type": "object"
                                 }
                             },
                             "type": "object"
@@ -1136,6 +1228,10 @@
                                 },
                                 "readOnly": {
                                     "type": "boolean"
+                                },
+                                "script": {
+                                    "description": "A user-provided function that computes the value of a \"formula\" (scripted) field for a given item.\nIt receives the item id, its (static) attributes, its index in the graph and the full graph instance.",
+                                    "type": "object"
                                 }
                             },
                             "type": "object"
@@ -1184,6 +1280,10 @@
                                 },
                                 "readOnly": {
                                     "type": "boolean"
+                                },
+                                "script": {
+                                    "description": "A user-provided function that computes the value of a \"formula\" (scripted) field for a given item.\nIt receives the item id, its (static) attributes, its index in the graph and the full graph instance.",
+                                    "type": "object"
                                 }
                             },
                             "type": "object"
@@ -1220,6 +1320,10 @@
                                 },
                                 "readOnly": {
                                     "type": "boolean"
+                                },
+                                "script": {
+                                    "description": "A user-provided function that computes the value of a \"formula\" (scripted) field for a given item.\nIt receives the item id, its (static) attributes, its index in the graph and the full graph instance.",
+                                    "type": "object"
                                 }
                             },
                             "type": "object"
@@ -1256,6 +1360,10 @@
                                 },
                                 "readOnly": {
                                     "type": "boolean"
+                                },
+                                "script": {
+                                    "description": "A user-provided function that computes the value of a \"formula\" (scripted) field for a given item.\nIt receives the item id, its (static) attributes, its index in the graph and the full graph instance.",
+                                    "type": "object"
                                 }
                             },
                             "type": "object"
@@ -1292,6 +1400,10 @@
                                 },
                                 "readOnly": {
                                     "type": "boolean"
+                                },
+                                "script": {
+                                    "description": "A user-provided function that computes the value of a \"formula\" (scripted) field for a given item.\nIt receives the item id, its (static) attributes, its index in the graph and the full graph instance.",
+                                    "type": "object"
                                 }
                             },
                             "type": "object"
@@ -1328,6 +1440,10 @@
                                 },
                                 "readOnly": {
                                     "type": "boolean"
+                                },
+                                "script": {
+                                    "description": "A user-provided function that computes the value of a \"formula\" (scripted) field for a given item.\nIt receives the item id, its (static) attributes, its index in the graph and the full graph instance.",
+                                    "type": "object"
                                 }
                             },
                             "type": "object"
@@ -1364,6 +1480,10 @@
                                 },
                                 "readOnly": {
                                     "type": "boolean"
+                                },
+                                "script": {
+                                    "description": "A user-provided function that computes the value of a \"formula\" (scripted) field for a given item.\nIt receives the item id, its (static) attributes, its index in the graph and the full graph instance.",
+                                    "type": "object"
                                 }
                             },
                             "type": "object"
@@ -1400,6 +1520,10 @@
                                 },
                                 "readOnly": {
                                     "type": "boolean"
+                                },
+                                "script": {
+                                    "description": "A user-provided function that computes the value of a \"formula\" (scripted) field for a given item.\nIt receives the item id, its (static) attributes, its index in the graph and the full graph instance.",
+                                    "type": "object"
                                 }
                             },
                             "type": "object"
@@ -1444,6 +1568,10 @@
                                 },
                                 "readOnly": {
                                     "type": "boolean"
+                                },
+                                "script": {
+                                    "description": "A user-provided function that computes the value of a \"formula\" (scripted) field for a given item.\nIt receives the item id, its (static) attributes, its index in the graph and the full graph instance.",
+                                    "type": "object"
                                 }
                             },
                             "type": "object"
