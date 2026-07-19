@@ -2018,6 +2018,9 @@
         "Record<string,string>": {
             "type": "object"
         },
+        "Record<string,unknown>": {
+            "type": "object"
+        },
         "Scalar": {
             "description": "BASE TYPES:\n***********",
             "type": [
@@ -2040,6 +2043,31 @@
                 "type": {
                     "const": "script",
                     "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "Session": {
+            "properties": {
+                "layoutsParameters": {
+                    "additionalProperties": {
+                        "$ref": "#/definitions/Record<string,unknown>"
+                    },
+                    "type": "object"
+                },
+                "metrics": {
+                    "additionalProperties": {
+                        "properties": {
+                            "attributeNames": {
+                                "$ref": "#/definitions/Record<string,string>"
+                            },
+                            "parameters": {
+                                "$ref": "#/definitions/Record<string,unknown>"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "type": "object"
                 }
             },
             "type": "object"
@@ -2313,7 +2341,7 @@
             "type": "object"
         }
     },
-    "description": "A serializable structure, to allow Gephi Lite to load and save graphs, with their surrounding context.\nThis includes:\n- The full graph dataset\n- The filters state\n- The appearance state",
+    "description": "A serializable structure, to allow Gephi Lite to load and save graphs, with their surrounding context.\nThis includes:\n- The full graph dataset\n- The filters state\n- The appearance state\n- The session (layouts & metrics parameters)",
     "properties": {
         "appearance": {
             "$ref": "#/definitions/AppearanceState"
@@ -2323,6 +2351,9 @@
         },
         "graphDataset": {
             "$ref": "#/definitions/GraphDataset"
+        },
+        "session": {
+            "$ref": "#/definitions/Session"
         },
         "type": {
             "const": "gephi-lite",
