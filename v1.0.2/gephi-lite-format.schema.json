@@ -2049,6 +2049,9 @@
         },
         "Session": {
             "properties": {
+                "lastLayoutId": {
+                    "type": "string"
+                },
                 "layoutsParameters": {
                     "additionalProperties": {
                         "$ref": "#/definitions/Record<string,unknown>"
