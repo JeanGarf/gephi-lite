@@ -1661,7 +1661,8 @@
                 },
                 {
                     "properties": {
-                        "density": {
+                        "labelsCount": {
+                            "description": "How many node labels should be displayed at once, on a reference-sized screen (the actual\nbudget is scaled to the viewport, see `getNodeLabelsBudget`). It is optional, since states\nsaved before this setting existed don't have it: always read it through `getLabelsCount`.",
                             "type": "number"
                         },
                         "zoomCorrelation": {
@@ -1766,7 +1767,8 @@
                 },
                 {
                     "properties": {
-                        "density": {
+                        "labelsCount": {
+                            "description": "How many node labels should be displayed at once, on a reference-sized screen (the actual\nbudget is scaled to the viewport, see `getNodeLabelsBudget`). It is optional, since states\nsaved before this setting existed don't have it: always read it through `getLabelsCount`.",
                             "type": "number"
                         },
                         "zoomCorrelation": {
