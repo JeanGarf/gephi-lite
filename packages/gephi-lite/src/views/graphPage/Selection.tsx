@@ -597,6 +597,7 @@ export const Selection: FC = () => {
                 onPick={(option) => setFilter({ text: String(option.label), nodeId: option.value })}
                 placeholder={t("selection.filter_edges_placeholder")}
                 clearTitle={t("selection.filter_clear")}
+                toggleTitle={t("selection.filter_show_nodes")}
               />
               {isFiltering && (
                 <div className="small text-muted">

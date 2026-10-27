@@ -1,8 +1,18 @@
-import { FC } from "react";
+import { ComponentProps, FC, useRef } from "react";
+import { type SelectInstance, components } from "react-select";
 
 import { normalizeText } from "../../core/search";
 import { ClearButton } from "../ClearableInput";
+import { CaretDownIcon } from "../common-icons";
 import { Select, StringOption } from "./Select";
+
+// react-select hides the typed text after a pick (it expects the picked value to take its place),
+// but here the text is the field's content: keep it shown. Defined here, not inline, so that it is
+// not a new component (hence a remount losing the focus) on every render.
+const COMBOBOX_COMPONENTS = {
+  DropdownIndicator: null,
+  Input: (props: ComponentProps<typeof components.Input>) => <components.Input {...props} isHidden={false} />,
+};
 
 /**
  * Editable combobox: a text field that is also a dropdown of options. The text stays free (typing
@@ -16,33 +26,69 @@ export const Combobox: FC<{
   onPick: (option: StringOption) => void;
   placeholder?: string;
   clearTitle: string;
-}> = ({ text, onTextChange, options, onPick, placeholder, clearTitle }) => (
-  // Escape reaches this wrapper only when the dropdown is closed (Select swallows it otherwise),
-  // so it then empties the field, like in ClearableInput.
-  <div
-    className="position-relative"
-    onKeyDown={(e) => {
-      if (e.key === "Escape" && text) {
-        e.stopPropagation();
-        onTextChange("");
-      }
-    }}
-  >
-    <Select<StringOption>
-      options={options}
-      value={null}
-      inputValue={text}
-      placeholder={placeholder}
-      aria-label={placeholder ?? clearTitle}
-      // The field's text is owned by the caller: react-select must not blank it on blur or pick.
-      onInputChange={(value, { action }) => {
-        if (action === "input-change") onTextChange(value);
+  toggleTitle: string;
+}> = ({ text, onTextChange, options, onPick, placeholder, clearTitle, toggleTitle }) => {
+  const selectRef = useRef<SelectInstance<StringOption>>(null);
+
+  // Opens (or closes) the dropdown from the caret button. The field is focused so that react-select
+  // keeps its usual behaviour (closing on outside click, Escape...), but flagged `inputmode="none"`
+  // meanwhile so that touch devices do not raise their on-screen keyboard over the list. The flag is
+  // dropped as soon as the user taps the field or leaves it, so typing works as usual after that.
+  const toggleMenu = () => {
+    const select = selectRef.current;
+    const input = select?.inputRef;
+    if (!select || !input) return;
+    if (select.props.menuIsOpen) return select.blur();
+    input.setAttribute("inputmode", "none");
+    select.openMenu("first");
+    select.focus();
+  };
+
+  return (
+    // Escape reaches this wrapper only when the dropdown is closed (Select swallows it otherwise),
+    // so it then empties the field, like in ClearableInput.
+    <div
+      className="position-relative"
+      onPointerDown={(e) => {
+        if (e.target instanceof HTMLInputElement) e.target.removeAttribute("inputmode");
       }}
-      onChange={(option) => option && onPick(option)}
-      filterOption={(option, input) => normalizeText(String(option.label)).includes(normalizeText(input.trim()))}
-      noOptionsMessage={() => null}
-      components={{ DropdownIndicator: null }}
-    />
-    {text && <ClearButton title={clearTitle} onClick={() => onTextChange("")} />}
-  </div>
-);
+      onKeyDown={(e) => {
+        if (e.key === "Escape" && text) {
+          e.stopPropagation();
+          onTextChange("");
+        }
+      }}
+    >
+      <Select<StringOption>
+        ref={selectRef}
+        options={options}
+        value={null}
+        inputValue={text}
+        placeholder={placeholder}
+        aria-label={placeholder ?? clearTitle}
+        // The field's text is owned by the caller: react-select must not blank it on blur or pick.
+        onInputChange={(value, { action }) => {
+          if (action === "input-change") onTextChange(value);
+        }}
+        onChange={(option) => option && onPick(option)}
+        filterOption={(option, input) => normalizeText(String(option.label)).includes(normalizeText(input.trim()))}
+        noOptionsMessage={() => null}
+        onBlur={(e) => e.target.removeAttribute("inputmode")}
+        components={COMBOBOX_COMPONENTS}
+        styles={{ valueContainer: (base) => ({ ...base, paddingRight: "3.5rem" }) }}
+      />
+      {text && <ClearButton title={clearTitle} className="me-4" onClick={() => onTextChange("")} />}
+      <button
+        type="button"
+        className="gl-btn gl-btn-icon position-absolute top-50 end-0 translate-middle-y"
+        title={toggleTitle}
+        aria-label={toggleTitle}
+        // Keeps the focus where it is, so that a click on an open list's caret closes it (via blur).
+        onMouseDown={(e) => e.preventDefault()}
+        onClick={toggleMenu}
+      >
+        <CaretDownIcon />
+      </button>
+    </div>
+  );
+};
