@@ -3,10 +3,14 @@ import { FC } from "react";
 import { CloseIcon } from "./common-icons";
 
 /** Cross button laid over the right end of a field (in a `position-relative` wrapper), to empty it. */
-export const ClearButton: FC<{ title: string; onClick: () => void }> = ({ title, onClick }) => (
+export const ClearButton: FC<{ title: string; onClick: () => void; className?: string }> = ({
+  title,
+  onClick,
+  className,
+}) => (
   <button
     type="button"
-    className="gl-btn gl-btn-icon position-absolute top-50 end-0 translate-middle-y"
+    className={`gl-btn gl-btn-icon position-absolute top-50 end-0 translate-middle-y ${className ?? ""}`}
     title={title}
     aria-label={title}
     onClick={onClick}

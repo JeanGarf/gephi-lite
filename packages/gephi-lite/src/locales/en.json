@@ -743,6 +743,7 @@
     "filter_count": "{{shown}} / {{total}} edges",
     "filter_edges_placeholder": "Filter by node or text…",
     "filter_no_match": "No edge matches",
+    "filter_show_nodes": "Show the nodes",
     "unselect_all": "Unselect all",
     "unselect_all_hidden_edges": "Unselect all hidden edges",
     "unselect_all_hidden_nodes": "Unselect all hidden edges",
