@@ -30,18 +30,31 @@ export const Combobox: FC<{
 }> = ({ text, onTextChange, options, onPick, placeholder, clearTitle, toggleTitle }) => {
   const selectRef = useRef<SelectInstance<StringOption>>(null);
 
+  // Whether the list was open when the caret was pressed: on touch screens the press already moves
+  // the focus away (which closes the list) before the click arrives, so the click cannot tell by
+  // itself whether it is meant to open or to close.
+  const wasOpenRef = useRef(false);
+
   // Opens (or closes) the dropdown from the caret button. The field is focused so that react-select
   // keeps its usual behaviour (closing on outside click, Escape...), but flagged `inputmode="none"`
-  // meanwhile so that touch devices do not raise their on-screen keyboard over the list. The flag is
-  // dropped as soon as the user taps the field or leaves it, so typing works as usual after that.
+  // meanwhile so that touch devices do not raise their on-screen keyboard over the list.
   const toggleMenu = () => {
     const select = selectRef.current;
     const input = select?.inputRef;
     if (!select || !input) return;
-    if (select.props.menuIsOpen) return select.blur();
+    if (wasOpenRef.current) return select.blur();
     input.setAttribute("inputmode", "none");
     select.openMenu("first");
     select.focus();
+  };
+
+  // Tapping the field after the caret gives the keyboard back. The flag is dropped, and the field
+  // refocused since a focused field does not raise the keyboard just because its mode changed.
+  const restoreKeyboard = (input: HTMLInputElement) => {
+    if (!input.hasAttribute("inputmode")) return;
+    input.removeAttribute("inputmode");
+    input.blur();
+    input.focus();
   };
 
   return (
@@ -50,7 +63,7 @@ export const Combobox: FC<{
     <div
       className="position-relative"
       onPointerDown={(e) => {
-        if (e.target instanceof HTMLInputElement) e.target.removeAttribute("inputmode");
+        if (e.target instanceof HTMLInputElement) restoreKeyboard(e.target);
       }}
       onKeyDown={(e) => {
         if (e.key === "Escape" && text) {
@@ -85,6 +98,9 @@ export const Combobox: FC<{
         aria-label={toggleTitle}
         // Keeps the focus where it is, so that a click on an open list's caret closes it (via blur).
         onMouseDown={(e) => e.preventDefault()}
+        onPointerDown={() => {
+          wasOpenRef.current = !!selectRef.current?.props.menuIsOpen;
+        }}
         onClick={toggleMenu}
       >
         <CaretDownIcon />
