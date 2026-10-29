@@ -1,12 +1,11 @@
 import { DEFAULT_NODE_COLOR, FieldModel, NodeCoordinates, Scalar, StaticDynamicItemData } from "@gephi/gephi-lite-sdk";
-import { groupBy, isNil, toPairs, values } from "lodash";
+import { countBy, groupBy, isNil, toPairs, values } from "lodash";
 import { FC, ReactNode, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import AnimateHeight from "react-animate-height";
 import { useTranslation } from "react-i18next";
 import { PiChecks } from "react-icons/pi";
 import { useNavigate } from "react-router";
 
-import { ClearableInput } from "../../components/ClearableInput";
 import Dropdown from "../../components/Dropdown";
 import { InfiniteScroll } from "../../components/InfiniteScroll";
 import {
@@ -31,6 +30,7 @@ import { EdgeComponent } from "../../components/data/Edge";
 import { EditEdgeModal } from "../../components/data/EditEdge";
 import { EditNodeModal } from "../../components/data/EditNode";
 import { NodeComponent } from "../../components/data/Node";
+import { Combobox } from "../../components/forms/Combobox";
 import ConfirmModal from "../../components/modals/ConfirmModal";
 import { getItemAttributes } from "../../core/appearance/utils";
 import {
@@ -448,18 +448,37 @@ export const Selection: FC = () => {
     return grouped;
   }, [filteredGraph, items, type, compareItems]);
 
-  // Text filter (edges only, from 2 characters): it only narrows what the list shows. The selection
-  // itself, the graph and the panel's actions (locate, open in data, delete...) keep using all of it.
-  const [filterText, setFilterText] = useState("");
-  const query = normalizeText(filterText.trim());
-  const isFiltering = type === "edges" && query.length >= MIN_FILTER_LENGTH;
+  // Filter (edges only): it only narrows what the list shows. The selection itself, the graph and
+  // the panel's actions (locate, open in data, delete...) keep using all of it. The field is a
+  // combobox of the selected edges' end nodes: picking one keeps the edges touching it, while free
+  // text (from 2 characters) keeps those whose labels contain it.
+  const [filter, setFilter] = useState<{ text: string; nodeId: string | null }>({ text: "", nodeId: null });
+  const setFilterText = useCallback((text: string) => setFilter({ text, nodeId: null }), []);
+  const query = normalizeText(filter.text.trim());
+  const isFiltering = type === "edges" && (!!filter.nodeId || query.length >= MIN_FILTER_LENGTH);
+
+  const endNodeOptions = useMemo(() => {
+    if (type !== "edges") return [];
+    const labelOf = (id: string) => getNodeLabel?.(nodeAllData[id]) || id;
+    const ids = new Set<string>();
+    items.forEach((edge) => {
+      ids.add(fullGraph.source(edge));
+      ids.add(fullGraph.target(edge));
+    });
+    const labelCounts = countBy(Array.from(ids), labelOf);
+    return Array.from(ids)
+      .map((id) => ({ value: id, label: labelCounts[labelOf(id)] > 1 ? `${labelOf(id)} (${id})` : labelOf(id) }))
+      .sort((a, b) => a.label.localeCompare(b.label));
+  }, [type, items, fullGraph, nodeAllData, getNodeLabel]);
 
   const matchesFilter = useCallback(
     (id: string) =>
-      getAlphabeticalKey(id)
-        .concat(id)
-        .some((part) => normalizeText(part).includes(query)),
-    [getAlphabeticalKey, query],
+      filter.nodeId
+        ? fullGraph.source(id) === filter.nodeId || fullGraph.target(id) === filter.nodeId
+        : getAlphabeticalKey(id)
+            .concat(id)
+            .some((part) => normalizeText(part).includes(query)),
+    [getAlphabeticalKey, query, filter.nodeId, fullGraph],
   );
   const shownVisible = useMemo(
     () => (isFiltering ? visible.filter(matchesFilter) : visible),
@@ -508,7 +527,7 @@ export const Selection: FC = () => {
       setFilterText("");
     }
     previousSelectionRef.current = { type, items };
-  }, [type, items]);
+  }, [type, items, setFilterText]);
 
   return (
     <>
@@ -571,11 +590,14 @@ export const Selection: FC = () => {
           </div>
           {type === "edges" && (
             <>
-              <ClearableInput
-                value={filterText}
-                onChange={setFilterText}
+              <Combobox
+                text={filter.text}
+                onTextChange={setFilterText}
+                options={endNodeOptions}
+                onPick={(option) => setFilter({ text: String(option.label), nodeId: option.value })}
                 placeholder={t("selection.filter_edges_placeholder")}
                 clearTitle={t("selection.filter_clear")}
+                toggleTitle={t("selection.filter_show_nodes")}
               />
               {isFiltering && (
                 <div className="small text-muted">

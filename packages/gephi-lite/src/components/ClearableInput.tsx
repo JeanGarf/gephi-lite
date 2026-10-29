@@ -2,6 +2,23 @@ import { FC } from "react";
 
 import { CloseIcon } from "./common-icons";
 
+/** Cross button laid over the right end of a field (in a `position-relative` wrapper), to empty it. */
+export const ClearButton: FC<{ title: string; onClick: () => void; className?: string }> = ({
+  title,
+  onClick,
+  className,
+}) => (
+  <button
+    type="button"
+    className={`gl-btn gl-btn-icon position-absolute top-50 end-0 translate-middle-y ${className ?? ""}`}
+    title={title}
+    aria-label={title}
+    onClick={onClick}
+  >
+    <CloseIcon />
+  </button>
+);
+
 /** Text input with a cross button to empty it. */
 export const ClearableInput: FC<{
   value: string;
@@ -26,17 +43,7 @@ export const ClearableInput: FC<{
           }
         }}
       />
-      {value && (
-        <button
-          type="button"
-          className="gl-btn gl-btn-icon position-absolute top-50 end-0 translate-middle-y"
-          title={clearTitle}
-          aria-label={clearTitle}
-          onClick={() => onChange("")}
-        >
-          <CloseIcon />
-        </button>
-      )}
+      {value && <ClearButton title={clearTitle} onClick={() => onChange("")} />}
     </div>
   );
 };
